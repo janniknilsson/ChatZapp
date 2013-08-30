@@ -15,6 +15,13 @@ namespace SignalR.Model.Repositories
     private static MongoDatabase DataProvider { get { return MongoDataProvider.Get(); } }
     private static MongoCollection Collection { get { return DataProvider.GetCollection(CollectionName); } }
 
+    public static IEnumerable<Message> GetAll()
+    {
+      if (Collection == null)
+        throw new NullReferenceException("Collection could not be found: " + CollectionName);
+       return Collection.FindAllAs<Message>();
+    }
+
     public static IEnumerable<Message> GetAllInRadius(double latitude, double longitude, int radius)
     {
       if (Collection == null)

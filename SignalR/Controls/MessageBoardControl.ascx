@@ -19,6 +19,11 @@
               </em>
               <%#((Message)Container.DataItem).SendTime.ToString("dd-MM-yyyy  HH:mm") %>
             </p>
+            <p>
+              <span>
+                <%#((Message)Container.DataItem).Latitude %> || <%#((Message)Container.DataItem).Longitude %>
+              </span>
+            </p>
           </div>
           <div class="info">
             <%# GetMessagesInDiscussion(((Message)Container.DataItem).GroupId) %>
