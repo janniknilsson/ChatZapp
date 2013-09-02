@@ -6,11 +6,10 @@
     <asp:TextBox runat="server" ID="TxtName" required />
 
     <h2>What is the scan radius? (km)</h2>
-    <asp:TextBox runat="server" ID="TxtRadius" required TextMode="Number" />
+    <asp:TextBox runat="server" ID="TxtRadius" required TextMode="Number" min="1" />
     <br/>
     <asp:Button ID="Button1" runat="server" OnClick="SaveNameAndRadius" Text="START" CssClass="button-start" />
   </asp:Panel>
-
 </asp:Content>
 
 <asp:Content ID="HiddenContent" ContentPlaceHolderID="HiddenPlaceholder" runat="server">

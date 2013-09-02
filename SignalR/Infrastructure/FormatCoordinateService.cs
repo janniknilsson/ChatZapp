@@ -14,7 +14,6 @@ namespace SignalR.Infrastructure
         double coord;
         double.TryParse(coordonate, out coord);
         FormattedCoordonate = coord;
-   
       return FormattedCoordonate;
     }
   }
