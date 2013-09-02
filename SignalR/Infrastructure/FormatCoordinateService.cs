@@ -7,6 +7,8 @@ namespace SignalR.Infrastructure
     public static Double FormattedCoordonate { get; set; }
     public static double Format(string coordonate)
     {
+      if(string.IsNullOrEmpty(coordonate))
+        throw new ArgumentNullException("coordonate");
         coordonate = coordonate.Replace(".","");
         coordonate = coordonate.Insert(2, ",");
         double coord;
