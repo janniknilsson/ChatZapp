@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -16,5 +15,6 @@ namespace SignalR.Model
     public DateTime SendTime { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
+    public string Browser { get; set; }
   }
 }

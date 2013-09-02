@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBoardControl.ascx.cs" Inherits="SignalR.Controls.MessageBoardControl" %>
 <%@ Import Namespace="SignalR.Model" %>
 <div class="viewport">
-  
+<%--    <h1 id="sLatitude"></h1>
+  <h1 id="sLongitude"></h1>--%>
   <asp:Repeater runat="server" ID="Discussions" DataSource="<%#GetMessageBoardDiscussions() %>">
     <HeaderTemplate>
       <ul class="conversations">
@@ -11,7 +12,7 @@
         <asp:LinkButton runat="server" OnClick="ShowDiscussion" CommandArgument="<%#(((Message)Container.DataItem).GroupId) %>">
           <div class="text">
             <p>
-              <strong><%#((Message)Container.DataItem).Author %></strong>
+              <strong><%#((Message)Container.DataItem).Author %> :</strong>
               <%#((Message)Container.DataItem).Text %>
             </p>
             <p>

@@ -17,5 +17,11 @@ namespace SignalR
     {
       get { return MessageRepository.GetAll(); }
     }
+
+    protected void DeleteAllMessages(object sender, EventArgs e)
+    {
+      MessageRepository.DeleteAll();
+      Response.Redirect(".");
+    }
   }
 }

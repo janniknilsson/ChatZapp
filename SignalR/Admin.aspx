@@ -10,6 +10,13 @@
 </head>
 <body>
   <form id="form1" runat="server">
+    <table>
+      <tr>
+        <td>
+          <asp:Button runat="server" ID="BtnDeleteAll" OnClick="DeleteAllMessages" Text="DeleteAll"/>
+        </td>
+      </tr>
+    </table>
     <div>
       <asp:Repeater runat="server" DataSource="<%#DataSource %>">
         <HeaderTemplate>
@@ -27,6 +34,7 @@
               </td>
               <td>Text
               </td>
+              <td>Browser</td>
             </tr>
         </HeaderTemplate>
         <ItemTemplate>
@@ -37,6 +45,7 @@
             <td><%#((Message)Container.DataItem).Longitude %></td>
             <td><%#((Message)Container.DataItem).SendTime %></td>
             <td><%#((Message)Container.DataItem).Text %></td>
+            <td><%#((Message)Container.DataItem).Browser %></td>
           </tr>
         </ItemTemplate>
         <FooterTemplate>

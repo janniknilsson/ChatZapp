@@ -9,6 +9,7 @@
   <title>ChatZapp</title>
   <asp:ContentPlaceHolder ID="head" runat="server">
   </asp:ContentPlaceHolder>
+  <script src="/Scripts/Custom/BrowserDetect.js"></script>
   <link href="Styles/Main.css" rel="stylesheet" />
 </head>
 <body>
@@ -18,8 +19,8 @@
       </asp:ContentPlaceHolder>
 
       <asp:ContentPlaceHolder runat="server" ID="NavigationPlaceholder">
-        <uc1:BottomNavigationControl runat="server" ID="BottomNavigationControl" />
       </asp:ContentPlaceHolder>
+
       <asp:ContentPlaceHolder runat="server" ID="HiddenPlaceholder">
         <asp:HiddenField runat="server" ID="Latitude" ClientIDMode="Static" />
         <asp:HiddenField runat="server" ID="Longitude" ClientIDMode="Static" />

@@ -2,14 +2,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder" runat="server">
   <asp:Panel runat="server" ID="UserPanel" Visible="True" CssClass="userinfo">
-    <div>
-      <h2>What is your name</h2>
-      <asp:TextBox runat="server" ID="TxtName" required />
+    <h2>What is your name</h2>
+    <asp:TextBox runat="server" ID="TxtName" required />
 
-      <h2>What is the scan radius? (km)</h2>
-      <asp:TextBox runat="server" ID="TxtRadius" required TextMode="Number" />
-      <asp:Button ID="Button1" runat="server" OnClick="SaveNameAndRadius" Text="Save" />
-    </div>
+    <h2>What is the scan radius? (km)</h2>
+    <asp:TextBox runat="server" ID="TxtRadius" required TextMode="Number" />
+    <br/>
+    <asp:Button ID="Button1" runat="server" OnClick="SaveNameAndRadius" Text="START" CssClass="button-start" />
   </asp:Panel>
 
 </asp:Content>

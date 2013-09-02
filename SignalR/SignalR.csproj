@@ -94,6 +94,7 @@
     <Content Include="Home.aspx" />
     <Content Include="MessageBoard.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\Custom\BrowserDetect.js" />
     <Content Include="Scripts\Custom\GeoLocation.js" />
     <Content Include="Master.Master" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
@@ -151,6 +152,7 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\FormatCoordinateService.cs" />
     <Compile Include="MessageBoard.aspx.cs">
       <DependentUpon>MessageBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -1,12 +1,11 @@
 ﻿using System;
 using MongoDB.Bson;
-using SignalR.Infrastructure;
 
 namespace SignalR.Model.Factories
 {
   public class MessageFactory
   {
-    public static Message Create(string author, string groupId, string text, DateTime sendTime, double longitude, double latitude)
+    public static Message Create(string author, string groupId, string text, DateTime sendTime, double latitude, double longitude, string browser)
     {
       return new Message
       {
@@ -16,7 +15,8 @@ namespace SignalR.Model.Factories
         SendTime = sendTime,
         Text = text,
         Longitude = longitude,
-        Latitude = latitude
+        Latitude = latitude,
+        Browser = browser
       };
     }
   }

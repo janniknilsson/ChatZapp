@@ -18,10 +18,9 @@
 
 <div id="discussion_container">
   <input type="text" id="message" />
-  <input type="button" id="sendmessage" value="Send" />
+  <input type="button" id="sendmessage" value="Send" class="button-send" />
   <input type="hidden" id="displayname" />
   <input type="hidden" id="discussionId" value="<%#GroupId %>" />
   <asp:HiddenField runat="server" ID="UserName" ClientIDMode="Static"/>
 </div>
-
-
+<span id="error"></span>

@@ -13,14 +13,12 @@
     }
   };
 
-  //$('#displayname').val(prompt('Enter your name:', ''));
-
-  //$('#displayname').val($('#UserName').val());
   $("#message").focus();
 
   $.connection.hub.start().done(function () {
     $('#sendmessage').click(function () {
-      chat.server.send($('#UserName').val(), $('#message').val(), $('#discussionId').val(), $('#Latitude').val(), $('#Longitude').val());
+      $('#error').val(BrowserDetect.browser);
+      chat.server.send($('#UserName').val(), $('#message').val(), $('#discussionId').val(), $('#Latitude').val(), $('#Longitude').val(), BrowserDetect.browser + " " + BrowserDetect.version + " on " + BrowserDetect.OS );
       $('#message').val('').focus();
     });
   });
@@ -35,8 +33,17 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  $('#Latitude').val(position.coords.latitude);
-  $('#Longitude').val(position.coords.longitude);
+  $('#sLatitude').html(formatCoordonates(position.coords.latitude));
+  $('#sLongitude').html(formatCoordonates(position.coords.longitude));
+  $('#Latitude').val(formatCoordonates(position.coords.latitude));
+  $('#Longitude').val(formatCoordonates(position.coords.longitude));
+}
+
+function formatCoordonates(coordonate) {
+  var cleanCoordonate = coordonate.toString().replace(".", "").substr(0, 10);
+  var firstPart = cleanCoordonate.substr(0, 2);
+  var secondPart = cleanCoordonate.substr(3, coordonate.length);
+  return firstPart + "." + secondPart;
 }
 
 

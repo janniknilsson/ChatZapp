@@ -56,5 +56,12 @@ namespace SignalR.Model.Repositories
       var messagesInGroup = GetByGroupId(groupId).ToList();
       return messagesInGroup.Count().ToString(CultureInfo.InvariantCulture);
     }
+
+    public static void DeleteAll()
+    {
+      if (Collection == null)
+        throw new NullReferenceException("Collection could not be found: " + CollectionName);
+      Collection.RemoveAll();
+    }
   }
 }

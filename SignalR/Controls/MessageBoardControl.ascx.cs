@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
+using SignalR.Infrastructure;
 using SignalR.Model;
 using SignalR.Model.Repositories;
 
@@ -13,7 +14,7 @@ namespace SignalR.Controls
       get
       {
         if (Session["Longitude"] != null)
-          return Convert.ToDouble(Session["Longitude"].ToString());
+          return FormatCoordinateService.Format(Session["Longitude"].ToString());
         Response.Redirect("/");
         return double.NaN;
       }
@@ -23,7 +24,7 @@ namespace SignalR.Controls
       get
       {
         if (Session["Latitude"] != null)
-          return Convert.ToDouble(Session["Latitude"].ToString());
+          return FormatCoordinateService.Format(Session["Latitude"].ToString());
         Response.Redirect("/");
         return double.NaN;
       }
@@ -63,7 +64,8 @@ namespace SignalR.Controls
 
     protected IEnumerable<Message> GetMessageBoardDiscussions()
     {
-      return MessageRepository.GetAllInRadius(Latitude, Longitude, Radius);
+      var allMsg = MessageRepository.GetAllInRadius(Latitude,Longitude, Radius);
+      return allMsg;
     }
 
     protected void ShowDiscussion(object sender, EventArgs e)
