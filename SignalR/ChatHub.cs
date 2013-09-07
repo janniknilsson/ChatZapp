@@ -14,21 +14,20 @@ namespace SignalR
       Double formattedLongitude = FormatCoordinateService.Format(longitude);
       if (string.IsNullOrEmpty(groupId))
       {
-        var newGroupId = Guid.NewGuid().ToString().Replace("-","");
+        var newGroupId = Guid.NewGuid().ToString().Replace("-", "");
         try
         {
           MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, formattedLatitude, formattedLongitude, browser));
         }
         catch (Exception)
         {
-          
-          throw new Exception(string.Concat(name + " " + message + " " + groupId +" "+latitude+" "+longitude+" "+browser));
+
+          throw new Exception(string.Concat(name + " " + message + " " + groupId + " " + latitude + " " + longitude + " " + browser));
         }
-        
       }
       else
       {
-        MessageRepository.Insert(MessageFactory.Create(name, groupId, message, DateTime.Now, Convert.ToDouble(latitude), Convert.ToDouble(longitude),browser));
+        MessageRepository.Insert(MessageFactory.Create(name, groupId, message, DateTime.Now, Convert.ToDouble(latitude), Convert.ToDouble(longitude), browser));
       }
       Clients.All.broadcastMessage(name, message, groupId);
     }
