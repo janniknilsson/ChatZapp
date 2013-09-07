@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Web.UI.WebControls;
 using SignalR.Infrastructure;
 using SignalR.Model;
@@ -14,7 +15,8 @@ namespace SignalR.Controls
       get
       {
         if (Session["Longitude"] != null)
-          return FormatCoordinateService.Format(Session["Longitude"].ToString());
+          //return FormatCoordinateService.Format(Session["Longitude"].ToString());
+          return Double.Parse(Session["Longitude"].ToString().Replace('.',','), new CultureInfo("en-US"));
         Response.Redirect("/");
         return double.NaN;
       }
@@ -24,7 +26,8 @@ namespace SignalR.Controls
       get
       {
         if (Session["Latitude"] != null)
-          return FormatCoordinateService.Format(Session["Latitude"].ToString());
+          //return FormatCoordinateService.Format(Session["Latitude"].ToString());
+          return Double.Parse(Session["Latitude"].ToString().Replace('.', ','), new CultureInfo("en-US"));
         Response.Redirect("/");
         return double.NaN;
       }
