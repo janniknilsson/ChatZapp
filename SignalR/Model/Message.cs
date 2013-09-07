@@ -13,8 +13,8 @@ namespace SignalR.Model
     public string Author { get; set; }
     public string Text { get; set; }
     public DateTime SendTime { get; set; }
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
+    public Double Latitude { get; set; }
+    public Double Longitude { get; set; }
     public string Browser { get; set; }
   }
 }

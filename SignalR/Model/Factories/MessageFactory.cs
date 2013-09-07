@@ -5,7 +5,7 @@ namespace SignalR.Model.Factories
 {
   public class MessageFactory
   {
-    public static Message Create(string author, string groupId, string text, DateTime sendTime, double latitude, double longitude, string browser)
+    public static Message Create(string author, string groupId, string text, DateTime sendTime, Double latitude, Double longitude, string browser)
     {
       return new Message
       {

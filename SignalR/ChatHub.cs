@@ -10,14 +10,16 @@ namespace SignalR
   {
     public void Send(string name, string message, string groupId, string latitude, string longitude, string browser)
     {
-      Double formattedLatitude = FormatCoordinateService.Format(latitude);
-      Double formattedLongitude = FormatCoordinateService.Format(longitude);
+      //Double formattedLatitude = FormatCoordinateService.Format(latitude);
+      //Double formattedLongitude = FormatCoordinateService.Format(longitude);
+      var newLat = latitude.Replace('.', ',');
+      var newLong = longitude.Replace('.', ',');
       if (string.IsNullOrEmpty(groupId))
       {
         var newGroupId = Guid.NewGuid().ToString().Replace("-", "");
         try
         {
-          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, formattedLatitude, formattedLongitude, browser));
+          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, Convert.ToDouble(newLat), Convert.ToDouble(newLong), browser));
         }
         catch (Exception)
         {
