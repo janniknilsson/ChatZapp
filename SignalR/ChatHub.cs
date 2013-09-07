@@ -19,7 +19,7 @@ namespace SignalR
         var newGroupId = Guid.NewGuid().ToString().Replace("-", "");
         try
         {
-          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, Double.Parse(newLat, new CultureInfo("en-us")), Double.Parse(newLong, new CultureInfo("en-us")), browser));
+          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, Double.Parse(newLat, new CultureInfo("en-US")), Double.Parse(newLong, new CultureInfo("en-US")), browser));
         }
         catch (Exception)
         {
