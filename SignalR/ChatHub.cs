@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Globalization;
 using Microsoft.AspNet.SignalR;
-using SignalR.Infrastructure;
 using SignalR.Model.Factories;
 using SignalR.Model.Repositories;
 
@@ -19,7 +19,7 @@ namespace SignalR
         var newGroupId = Guid.NewGuid().ToString().Replace("-", "");
         try
         {
-          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, Convert.ToDouble(newLat), Convert.ToDouble(newLong), browser));
+          MessageRepository.Insert(MessageFactory.Create(name, newGroupId, message, DateTime.Now, Double.Parse(newLat, CultureInfo.InvariantCulture), Double.Parse(newLong, CultureInfo.InvariantCulture), browser));
         }
         catch (Exception)
         {
