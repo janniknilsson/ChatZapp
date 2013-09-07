@@ -26,10 +26,14 @@
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(showPosition, positionError, { enableHighAccuracy: true });
   } else {
     alert("Geolocation is not supported by this browser.");
   }
+}
+
+function positionError() {
+  alert('no position');
 }
 
 function showPosition(position) {
