@@ -23,7 +23,7 @@ html {
 body {
   font-size: 62.5%;
   position: relative;
-  background: url(../Styles/Images/city.png);
+  background: url('http://chatzapp.apphb.com/Styles/Images/city.png');
   background: #fff;
   background-color: gray;
   -moz-background-size: 100% 100%;
