@@ -95,6 +95,7 @@
     <Content Include="MessageBoard.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Custom\BrowserDetect.js" />
+    <Content Include="Scripts\Custom\EventHandler.js" />
     <Content Include="Scripts\Custom\GeoLocation.js" />
     <Content Include="Master.Master" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />

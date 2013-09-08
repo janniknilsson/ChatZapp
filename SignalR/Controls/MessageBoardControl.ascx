@@ -1,8 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBoardControl.ascx.cs" Inherits="SignalR.Controls.MessageBoardControl" %>
 <%@ Import Namespace="SignalR.Model" %>
 <div class="viewport">
-<%--    <h1 id="sLatitude"></h1>
-  <h1 id="sLongitude"></h1>--%>
   <asp:Repeater runat="server" ID="Discussions" DataSource="<%#GetMessageBoardDiscussions() %>">
     <HeaderTemplate>
       <ul class="conversations">
