@@ -4,11 +4,6 @@ namespace SignalR
 {
   public partial class Home1 : System.Web.UI.Page
   {
-    protected override void OnInit(EventArgs e)
-    {
-      DataBind();base.OnInit(e);
-    }
-
     protected void SaveNameAndRadius(object sender, EventArgs e)
     {
       Session["UserName"] = TxtName.Text;

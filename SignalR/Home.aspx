@@ -2,8 +2,6 @@
 <%@ Import Namespace="System.Globalization" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder" runat="server">
-  
-<h1 style="color: white"><%#CultureInfo.CurrentCulture.ToString() %></h1>
   <asp:Panel runat="server" ID="UserPanel" Visible="True" CssClass="userinfo">
     <h2>What is your name</h2>
     <asp:TextBox runat="server" ID="TxtName" required />
