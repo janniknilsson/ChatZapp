@@ -1,7 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBoardControl.ascx.cs" Inherits="SignalR.Controls.MessageBoardControl" %>
-<%@ Import Namespace="System.Globalization" %>
 <%@ Import Namespace="SignalR.Model" %>
-<h1 style="color: white"><%#CultureInfo.CurrentCulture.ToString() %></h1>
 <div class="viewport">
   <asp:Repeater runat="server" ID="Discussions" DataSource="<%#GetMessageBoardDiscussions() %>">
     <HeaderTemplate>
