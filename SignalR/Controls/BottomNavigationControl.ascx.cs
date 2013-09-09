@@ -14,5 +14,10 @@ namespace SignalR.Controls
     {
       Response.Redirect("/MessageBoard.aspx");
     }
+
+    protected void ChangeRadius(object sender, EventArgs e)
+    {
+      Response.Redirect("/Home.aspx");
+    }
   }
 }
