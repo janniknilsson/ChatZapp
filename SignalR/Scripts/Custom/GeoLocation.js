@@ -11,6 +11,8 @@
       $('#message_' + discussionId).append('<li><strong>' + encodedName
           + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
     }
+
+    $('li .' + discussionId).css('background', 'red');
   };
 
   $("#message").focus();

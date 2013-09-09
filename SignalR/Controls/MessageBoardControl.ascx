@@ -6,7 +6,7 @@
       <ul class="conversations">
     </HeaderTemplate>
     <ItemTemplate>
-      <li>
+      <li class="<%#(((Message)Container.DataItem).GroupId) %>">
         <asp:LinkButton runat="server" OnClick="ShowDiscussion" CommandArgument="<%#(((Message)Container.DataItem).GroupId) %>">
           <div class="text">
             <p>
