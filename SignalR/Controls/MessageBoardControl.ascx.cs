@@ -14,9 +14,8 @@ namespace SignalR.Controls
     {
       get
       {
-        if (Session["Longitude"] != null)
-          //return FormatCoordinateService.Format(Session["Longitude"].ToString());
-          return Double.Parse(Session["Longitude"].ToString().Replace('.',','), new CultureInfo("en-US"));
+        if (Session["Longitude"] != null && Session["Longitude"].ToString() != string.Empty)
+          return Double.Parse(Session["Longitude"].ToString().Replace('.',','));
         Response.Redirect("/");
         return double.NaN;
       }
@@ -25,9 +24,8 @@ namespace SignalR.Controls
     {
       get
       {
-        if (Session["Latitude"] != null)
-          //return FormatCoordinateService.Format(Session["Latitude"].ToString());
-          return Double.Parse(Session["Latitude"].ToString().Replace('.', ','), new CultureInfo("en-US"));
+        if (Session["Latitude"] != null && !string.IsNullOrEmpty(Session["Latitude"].ToString()))
+          return Double.Parse(Session["Latitude"].ToString().Replace('.', ','));
         Response.Redirect("/");
         return double.NaN;
       }
@@ -37,7 +35,7 @@ namespace SignalR.Controls
     {
       get
       {
-        if (Session["UserName"] != null)
+        if (Session["UserName"] != null && !String.IsNullOrEmpty(Session["UserName"].ToString()))
           return Session["UserName"].ToString();
         Response.Redirect("/");
         return string.Empty;

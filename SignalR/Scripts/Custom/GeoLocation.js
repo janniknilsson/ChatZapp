@@ -37,10 +37,10 @@ function positionError() {
 }
 
 function showPosition(position) {
-  $('#sLatitude').html(formatCoordonates(position.coords.latitude));
-  $('#sLongitude').html(formatCoordonates(position.coords.longitude));
-  $('#Latitude').val(formatCoordonates(position.coords.latitude));
-  $('#Longitude').val(formatCoordonates(position.coords.longitude));
+  $('#sLatitude').html(position.coords.latitude);
+  $('#sLongitude').html(position.coords.longitude);
+  $('#Latitude').val(position.coords.latitude);
+  $('#Longitude').val(position.coords.longitude);
 }
 
 function formatCoordonates(coordonate) {
