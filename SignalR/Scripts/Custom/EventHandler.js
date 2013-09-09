@@ -1,11 +1,15 @@
 ﻿$(document).ready(function () {
-  $("form1").submit(function () { return false; });
-
-  $("#message").bind('keyup', function (event) {
+  $(window).keydown(function (event) {
     if (event.keyCode == 13) {
       event.preventDefault();
-      $("#sendmessage").click();
+
+      if($('#sendmessage').length > 0)
+        $('#sendmessage').click();
+
+      if ($('.button-start').length > 0)
+        $('.button-start').click();
       return false;
     }
+    return true;
   });
 });
