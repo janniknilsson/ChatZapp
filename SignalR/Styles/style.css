@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Icons-Sitecore';
+	src:url('fonts/Icons-Sitecore.eot');
+	src:url('fonts/Icons-Sitecore.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Icons-Sitecore.woff') format('woff'),
+		url('fonts/Icons-Sitecore.ttf') format('truetype'),
+		url('fonts/Icons-Sitecore.svg#Icons-Sitecore') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'Icons-Sitecore';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-client-"] {
+*/
+.icon-client-list, .icon-client-pencil, .icon-client-target {
+	font-family: 'Icons-Sitecore';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-client-list:before {
+	content: "\e000";
+}
+.icon-client-pencil:before {
+	content: "\e001";
+}
+.icon-client-target:before {
+	content: "\e002";
+}

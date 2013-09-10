@@ -104,8 +104,16 @@
     <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery.signalR-1.0.0.js" />
     <Content Include="Scripts\jquery.signalR-1.0.0.min.js" />
+    <Content Include="Styles\Copy of Main.css" />
+    <Content Include="Styles\fonts\Icons-Sitecore.dev.svg" />
+    <Content Include="Styles\fonts\Icons-Sitecore.svg" />
     <Content Include="Styles\Images\city.png" />
+    <Content Include="Styles\index.html" />
+    <Content Include="Styles\license.txt" />
+    <Content Include="Styles\lte-ie7.js" />
     <Content Include="Styles\Main.css" />
+    <Content Include="Styles\Read Me.txt" />
+    <Content Include="Styles\style.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -182,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-2.0.3.min.map" />
+    <Content Include="Styles\fonts\Icons-Sitecore.eot" />
+    <Content Include="Styles\fonts\Icons-Sitecore.ttf" />
+    <Content Include="Styles\fonts\Icons-Sitecore.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
